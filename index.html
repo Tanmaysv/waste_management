@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <style> body {padding: 0; margin: 0;} </style>
+		<script src="p5.min.js"></script>
+	    <script src="p5.dom.min.js"></script>
+	    <script src="p5.sound.min.js"></script>
+	    
+	    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    </head>
+  <body>
+
+    <h1> Please enter the cost of each edge in the range 1-100</h1>
+
+    <div class = "container"> 
+
+      <form id = "bin1" action = "" >
+        1 -> 2 : <input type="number" min="1" max="100" placeholder = "50" name="one_to_two" id = "e1">
+        <br>
+        1 -> 3 : <input type="number" min="1" max="100" id="one_to_three" placeholder = "50" name = "e2">
+        <br>
+        1 -> 4 : <input type="number" min="1" max="100"id="one_to_four" name = "e3" placeholder = "50">
+        <br>
+        <input type="button" value="Save1" onclick="insert()" />
+        <br><br>
+
+      </form>
+      <form id = "bin2" >
+        2 -> 1 : <input type="number" min="1" max="100" id="one_to_two" name ="e1" placeholder = "50">
+        <br>
+        2 -> 3 : <input type="number" name="one_to_three"min="1" max="100" id = "e2" placeholder = "50">
+        <br>
+        2 -> 4 : <input type="number" name="one_to_four" id = "e3" min="1" max="100" placeholder = "50">
+        <br>
+        <input type="button" value="Save2" onclick="insert()" />
+        <br><br>
+
+      </form>
+      <form id = "bin3" >
+        
+        3 -> 1 : <input type="number"  min="1" max="100" name="three_to_one" id ="e1" placeholder = "50">
+        <br>
+        3 -> 2 : <input type="number" min="1" max="100" name="three_to_two" id ="e2" placeholder = "50">
+        <br>
+        3 -> 4 : <input type="number" min="1" max="100" name="three_to_four" id ="e3" placeholder = "50">
+        <br>
+        <input type="button" value="Save3" onclick="insert()" />
+        <br><br>
+
+      </form>
+      
+      <form id = "bin4" >
+        
+        4 -> 1 : <input type="number" min="1" max="100" name="four_to_one" id ="e1" placeholder = "50">
+        <br>
+        4 -> 2 : <input type="number" min="1" max="100" name="four_to_two" id ="e2" placeholder = "50">
+        <br>
+        4 -> 3 : <input type="number" min="1" max="100" name="four_to_three" id ="e3" placeholder = "50">
+        <br>
+        <input type="button" value="Save4" onclick="insert()" />
+        <br><br>
+
+      </form>
+      
+    </div>
+    <div id = "cost_info"></div>
+    <div id = "directions"> </div>
+
+    <script src="sketch_main.js"></script>
+  </body>
+</html>
